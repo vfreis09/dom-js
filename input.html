@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Inputs</title>
+  </head>
+  <body>
+    <div>
+      <input class="js-input-name" placeholder="Name" />
+      <button onclick="insertName();" class="js-submit-button">Submit</button>
+      <p class="js-name-value"></p>
+    </div>
+    <script>
+      function insertName() {
+        const inputElement = document.querySelector(".js-input-name");
+        let name = inputElement.value;
+        document.querySelector(
+          ".js-name-value"
+        ).innerText = `Your name is ${name}`;
+      }
+    </script>
+  </body>
+</html>
