@@ -4,12 +4,40 @@
     <title>Buttons</title>
   </head>
   <body>
-    <button onclick="printButton();" class="js-button">Button</button>
+    <button onclick="printButton();" class="js-button">Click This</button>
+    <button onclick="changeButton();" class="js-second-button">9b</button>
+    <div>
+      <button onclick="headOrTails('heads');" class="js-button-heads">
+        Heads
+      </button>
+      <button onclick="headOrTails('tails');" class="js-button-tails">
+        Tails
+      </button>
+      <p class="js-paragraph"></p>
+    </div>
     <script>
       const buttonElement = document.querySelector(".js-button");
 
       function printButton() {
         console.log(buttonElement.innerText);
+      }
+
+      const otherButtonElement = document.querySelector(".js-second-button");
+
+      function changeButton() {
+        otherButtonElement.innerText = "9b done";
+      }
+
+      const headsButton = document.querySelector(".js-button-heads").innerText;
+      const tailsButton = document.querySelector(".js-button-tails").innerText;
+      let paragraphElement = document.querySelector(".js-paragraph");
+
+      function headOrTails(result) {
+        if (result === "heads") {
+          paragraphElement.innerText = `You choose: ${headsButton}`;
+        } else {
+          paragraphElement.innerText = `You choose: ${tailsButton}`;
+        }
       }
     </script>
   </body>
