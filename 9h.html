@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Input 9h</title>
+  </head>
+  <body>
+    <input
+      onkeyup="getResult(event);"
+      class="js-input-element"
+      placeholder="Type something"
+    />
+    <p class="js-result-input"></p>
+    <script>
+      const elementParagraph = document.querySelector(".js-result-input");
+      const inputElement = document.querySelector(".js-input-element");
+      function getResult() {
+        let myString = inputElement.value;
+        elementParagraph.innerText = myString;
+      }
+    </script>
+  </body>
+</html>
